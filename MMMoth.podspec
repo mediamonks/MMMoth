@@ -5,26 +5,22 @@
 
 Pod::Spec.new do |s|
 
-	s.name = "MMMoth"
-	s.version = "1.0"
-	s.summary = "Basic OAuth/OpenID library."
-	s.description =  s.summary
-	s.homepage = "https://github.com/mediamonks/#{s.name}"
-	s.license = "MIT"
-	s.authors = "MediaMonks"
-	s.source = { :git => "https://github.com/mediamonks/#{s.name}.git", :tag => s.version.to_s }
-	
-	s.ios.deployment_target = '11.0'
-
-	s.subspec 'ObjC' do |ss|		
-		ss.source_files = [ "Sources/#{s.name}ObjC/*.{h,m}" ]
-	end
-	
-	s.swift_versions = '4.2'
-	s.static_framework = true	
-	s.pod_target_xcconfig = {
-		"DEFINES_MODULE" => "YES"
-	}	
+    s.name = "MMMoth"
+    s.version = "1.0.1"
+    s.summary = "Basic OAuth/OpenID library."
+    s.description =  s.summary
+    s.homepage = "https://github.com/mediamonks/#{s.name}"
+    s.license = "MIT"
+    s.authors = "MediaMonks"
+    s.source = { :git => "https://github.com/mediamonks/#{s.name}.git", :tag => s.version.to_s }
+    
+    s.ios.deployment_target = '11.0'
+    
+    s.swift_versions = '4.2'
+    s.static_framework = true   
+    s.pod_target_xcconfig = {
+        "DEFINES_MODULE" => "YES"
+    }   
 
     s.dependency 'MMMLog'
   
@@ -42,7 +38,7 @@ Pod::Spec.new do |s|
     s.subspec 'Mocks' do |s|
       s.source_files = "Sources/Mocks/**/*.swift"
       # For MMMPseudoRandomSequence
-	  s.dependency 'MMMocking'
+      s.dependency 'MMMocking'
     end  
     
     s.test_spec 'Tests' do |ts|
