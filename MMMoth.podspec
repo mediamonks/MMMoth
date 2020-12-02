@@ -6,7 +6,7 @@
 Pod::Spec.new do |s|
 
     s.name = "MMMoth"
-    s.version = "1.0.1"
+    s.version = "1.0.2"
     s.summary = "Basic OAuth/OpenID library."
     s.description =  s.summary
     s.homepage = "https://github.com/mediamonks/#{s.name}"
@@ -31,15 +31,20 @@ Pod::Spec.new do |s|
 
     s.subspec 'UI' do |s|
       s.source_files = "Sources/UI/**/*.swift"
+      s.dependency 'MMMoth/Core'
       # For non-storyboardables, etc.
       s.dependency 'MMMCommonUI'
     end  
-  
-    s.subspec 'Mocks' do |s|
-      s.source_files = "Sources/Mocks/**/*.swift"
-      # For MMMPseudoRandomSequence
-      s.dependency 'MMMocking'
-    end  
+ 
+# There is a problem validating this one. 
+#    s.subspec 'Mocks' do |s|
+#      s.source_files = "Sources/Mocks/**/*.swift"
+#      s.dependency 'MMMoth/UI'
+#      # For MMMPseudoRandomSequence
+#      s.dependency 'MMMocking'
+#      s.dependency 'MMMObservables'
+#      s.dependency 'MMMCommonCore'
+#   end  
     
     s.test_spec 'Tests' do |ts|
       ts.source_files = "Tests/**/*.swift"

@@ -3,9 +3,10 @@
 // Copyright (C) 2020 MediaMonks. All rights reserved.
 //
 
+import MMMCommonCore
 import MMMLog
 import MMMObservables
-import MMMTemple
+import MMMocking
 
 /// To test AuthWebViewController without any actual provider.
 ///

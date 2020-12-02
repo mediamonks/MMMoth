@@ -1,6 +1,6 @@
 # MMMoth
 
-Basic OAuth/OpenID library..
+Basic OAuth/OpenID library.
 
 (This is a part of `MMMTemple` suite of iOS libraries we use at [MediaMonks](https://www.mediamonks.com/).)
 
@@ -19,6 +19,6 @@ pod 'MMMoth'
 
 ## Usage
 
-TBD
+See the comments for `MMMothClient` class.
 
 ---
