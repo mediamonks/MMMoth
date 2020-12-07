@@ -341,13 +341,30 @@ public final class MMMothClient {
 		if let credentials = credentialsForClientIdentifier(config.clientIdentifier) {
 
 			// We can use them if they have a similar scope and were received for the same response type.
-			if credentials.scope.isSuperset(of: scope) && credentials.responseType == responseType {
+			if credentials.responseType == responseType {
 
 				switch expirationStatus(credentials) {
+
 				case .validForever, .valid, .expired(canBeRefreshed: true):
+
 					MMMLogTrace(self, "Got compatible credentials from the storage")
+
+					// Unfortunately, for the most special providers the scope returned is not always a
+					// superset of what we were asking for originally, so we only emit warning for those.
+					if !credentials.scope.isSuperset(of: scope) {
+						MMMLogError(
+							self, """
+							Note that the scope of credentials in the store (\(credentials.scope)) is not a \
+							superset of what we ask for now (\(scope)). We are allowing this though as you \
+							must be using one of those very special providers.
+							"""
+						)
+					}
+
 					self.setAuthorized(credentials)
+
 					return
+
 				case .expired(canBeRefreshed: false):
 					MMMLogTrace(self, "Skipping credentials in the storage because they are expired and cannot be refreshed")
 				}
