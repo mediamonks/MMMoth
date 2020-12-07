@@ -784,7 +784,7 @@ public final class MMMothClient {
 			}
 			// We could simply pass the token type up to the user code, but they might forget to check it
 			// and get confused. Bearer tokens seem to be used most of the time anyway.
-			guard tokenType == "bearer" else {
+			guard tokenType.lowercased() == "bearer" else {
 				throw error("Only 'bearer' token types are supported (got '\(tokenType)')")
 			}
 
