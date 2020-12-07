@@ -117,6 +117,9 @@ public final class AuthWebViewController: NonStoryboardableViewController, WKNav
 		decisionHandler: @escaping (WKNavigationActionPolicy) -> Void
 	) {
 		let request = navigationAction.request
+		#if DEBUG
+		MMMLogTrace(self, "Request: \(request)")
+		#endif
 		if let url = request.url, viewModel.looksLikeRedirectURL(url: url) {
 			viewModel.handleRedirect(request: request)
 			decisionHandler(.cancel)
