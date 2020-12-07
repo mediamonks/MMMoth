@@ -1268,6 +1268,9 @@ extension MMMothClient {
 			/// The server should ask the end-user to select their account.
 			case selectAccount = "select_account"
 		}
+
+		// Won't work outside the library without a public initializer.
+		public init() {}
 	}
 }
 
