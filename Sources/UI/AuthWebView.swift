@@ -33,10 +33,18 @@ public final class AuthWebViewController: NonStoryboardableViewController, WKNav
 
 	private let viewModel: AuthWebViewViewModel
 	private var viewModelToken: SimpleEventToken?
+	private let webView: WKWebView?
 
-	public init(viewModel: AuthWebViewViewModel, style: Style) {
-
+	/// - Parameter webView: Optional instance of a pre-customized web view.
+	///   For example, the caller might use the one displaying shadows when scrolled
+	///   or using a tweaked default configuration.
+	public init(
+		viewModel: AuthWebViewViewModel,
+		style: Style,
+		webView: WKWebView? = nil
+	) {
 		self.style = style
+		self.webView = webView
 
 		self.viewModel = viewModel
 		super.init()
@@ -49,7 +57,7 @@ public final class AuthWebViewController: NonStoryboardableViewController, WKNav
 	private weak var _view: AuthWebView?
 
 	public override func loadView() {
-		let v = AuthWebView()
+		let v = AuthWebView(webView: webView)
 		self._view = v
 		self.view = v
 	}
@@ -220,9 +228,11 @@ internal final class AuthWebViewMessageStateView: NonStoryboardableView {
 
 internal final class AuthWebView: NonStoryboardableView {
 
-	public let webView = WKWebView()
+	public let webView: WKWebView
 
-	public override init() {
+	public init(webView: WKWebView?) {
+
+		self.webView = webView ?? WKWebView()
 
 		super.init()
 
@@ -230,9 +240,9 @@ internal final class AuthWebView: NonStoryboardableView {
 		self.translatesAutoresizingMaskIntoConstraints = true
 		self.backgroundColor = .white
 
-		webView.translatesAutoresizingMaskIntoConstraints = false
-		addSubview(webView)
-		mmm_addConstraintsAligningView(webView, horizontally: .fill, vertically: .fill)
+		self.webView.translatesAutoresizingMaskIntoConstraints = false
+		addSubview(self.webView)
+		mmm_addConstraintsAligningView(self.webView, horizontally: .fill, vertically: .fill)
 
 		updateUI()
 	}
