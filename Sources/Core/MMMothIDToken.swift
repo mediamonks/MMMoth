@@ -5,8 +5,8 @@
 
 import Foundation
 
-/// Simple parser for [ID Tokens](https://openid.net/specs/openid-connect-core-1_0.html#IDToken),
-/// which are non-encrypted [JSON Web Tokens](https://tools.ietf.org/html/rfc7519).
+/// Simple parser for [ID Tokens](https://openid.net/specs/openid-connect-core-1_0.html#IDToken ""),
+/// which are non-encrypted [JSON Web Tokens](https://tools.ietf.org/html/rfc7519 "").
 ///
 /// In the context of MMMoth library we are only interested in expiration time field, just to know when to refresh
 /// the token. We are not concerned with verification, it's something for the backend accepting the tokens.
@@ -59,6 +59,18 @@ public final class MMMothIDToken: Equatable, Codable, CustomStringConvertible {
 		}
 		return url
 	}
+
+	/// "End-User's preferred e-mail address. Its value MUST conform to the RFC 5322 [RFC5322] addr-spec syntax.
+	/// The RP MUST NOT rely upon this value being unique, as discussed in Section 5.7."
+	public var email: String? { payload["email"] as? String }
+
+	/// "Given name(s) or first name(s) of the End-User. Note that in some cultures, people can have multiple
+	/// given names; all can be present, with the names being separated by space characters."
+	public var givenName: String? { payload["given_name"] as? String }
+
+	/// "Surname(s) or last name(s) of the End-User. Note that in some cultures, people can have multiple
+	/// family names or no family name; all can be present, with the names being separated by space characters."
+	public var familyName: String? { payload["family_name"] as? String }
 
 	// MARK: -
 
