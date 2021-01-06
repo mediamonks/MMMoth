@@ -6,7 +6,7 @@
 Pod::Spec.new do |s|
 
     s.name = "MMMoth"
-    s.version = "1.3.0"
+    s.version = "1.4.0"
     s.summary = "Basic OAuth/OpenID library."
     s.description =  s.summary
     s.homepage = "https://github.com/mediamonks/#{s.name}"

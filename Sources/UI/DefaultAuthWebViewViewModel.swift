@@ -9,9 +9,11 @@ import MMMObservables
 
 public final class DefaultAuthWebViewViewModel: AuthWebViewViewModel {
 
-	public init(client: MMMothClient) {
-
-		assert(self.client == nil, "Calling \(#function) more than once?")
+	public init(
+		client: MMMothClient,
+		ignoreNavigationErrors: Bool = false
+	) {
+		self.ignoreNavigationErrors = ignoreNavigationErrors
 
 		self.client = client
 		client.didChange.addObserver(&clientDidChange) { [weak self] _ in
@@ -97,6 +99,8 @@ public final class DefaultAuthWebViewViewModel: AuthWebViewViewModel {
 
 		client.handleAuthorizationFailure(error: error)
 	}
+
+	public let ignoreNavigationErrors: Bool
 
 	public func cancel() {
 		client?.cancel()

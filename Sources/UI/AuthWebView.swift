@@ -98,6 +98,7 @@ public final class AuthWebViewController: NonStoryboardableViewController, WKNav
 		case .gotEndpoint(let r):
 			if request != r {
 				request = r
+				isInitialFrameLoading = true
 				view.webView.load(r)
 			}
 			view.setStateOverlayView(isLoading ? activityStateView : nil, animated: animated)
@@ -106,7 +107,7 @@ public final class AuthWebViewController: NonStoryboardableViewController, WKNav
 			view.setStateOverlayView(activityStateView, animated: animated)
 
 		case .cancelled:
-			// Keeping the current display state, assuming that the webview is being dismissed now.
+			// Keeping the current display state, assuming that the web view is being dismissed now.
 			break
 
 		case .failed:
@@ -136,7 +137,12 @@ public final class AuthWebViewController: NonStoryboardableViewController, WKNav
 		}
 	}
 
+	// We track loading of the main frame, so don't need to count how many time loading started, etc, a bool is OK.
 	private var isLoading: Bool = false
+
+	// We allow to ignore the errors for loads of pages different from the first one,
+	// because the implementation might not be always clean.
+	private var isInitialFrameLoading: Bool = false
 
 	private func didStartLoading() {
 		isLoading = true
@@ -144,10 +150,21 @@ public final class AuthWebViewController: NonStoryboardableViewController, WKNav
 	}
 
 	private func didFinishLoading(error: NSError?) {
+
+		guard isLoading else {
+			assertionFailure("Got a double 'did finish' notification? (\(error?.mmm_description ?? "<no error>"))")
+			return
+		}
+
 		isLoading = false
 		if let error = error, case .gotEndpoint = viewModel.state {
-			viewModel.handleFailureToOpenEndpoint(error: error)
+			if isInitialFrameLoading || !viewModel.ignoreNavigationErrors {
+				viewModel.handleFailureToOpenEndpoint(error: error)
+			}
 		}
+
+		isInitialFrameLoading = false
+
 		updateUI(animated: true)
 	}
 
@@ -158,6 +175,7 @@ public final class AuthWebViewController: NonStoryboardableViewController, WKNav
 
 	public func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
 		MMMLogTraceMethod(self)
+		MMMLogError(self, "Failed provisional navigation, not reporting this as an error though: \(error.mmm_description)")
 		didFinishLoading(error: error as NSError)
 	}
 
@@ -301,12 +319,17 @@ public protocol AuthWebViewViewModel: AnyObject {
 	/// added before the ones existing in the original redirect URL.
 	func looksLikeRedirectURL(url: URL) -> Bool
 
-	/// Called by the webview when it detects a redirect to a URL matching `redirectURL`.
+	/// Called by the web view when it detects a redirect to a URL matching `redirectURL`.
 	func handleRedirect(request: URLRequest)
 
-	/// Called by the webview to indicate that it was unable to open the endpoint.
+	/// Called by the web view to indicate that it was unable to open the endpoint.
 	/// (The error is only for diagnostics.)
 	func handleFailureToOpenEndpoint(error: NSError)
+
+	/// If `true`, then navigation errors are reported via `handleFailureToOpenEndpoint` only for the initial
+	/// navigation to the authorization endpoint; errors loading any other pages are ignored.
+	/// Might be handy for some non-clean implementations.
+	var ignoreNavigationErrors: Bool { get }
 
 	/// Called by any party to indicate that the user wants to cancel the flow.
 	/// It should be safe to call this regardless of the current state.
@@ -369,4 +392,3 @@ public enum AuthWebViewViewModelState: Equatable {
 	/// The view is expected to be dismissed wuthout changing what was displayed in it.
 	case cancelled
 }
-
