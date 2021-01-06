@@ -434,6 +434,24 @@ public final class MMMothClient {
 
 		var params: [String: String] = [:]
 
+		// OpenID specific parameters go first as they contain some unrestricted fields that should
+		// not accidentally shadow the important ones.
+		if let settings = openIDSettings {
+			params["display"] = settings.display.rawValue
+			let prompt = settings.prompt
+			if !prompt.isEmpty {
+				params["prompt"] = prompt.map{ $0.rawValue }.joined(separator: " ")
+			}
+			let locales = settings.uiLocales
+			if !locales.isEmpty {
+				params["ui_locales"] = locales.map{ $0 }.joined(separator: " ")
+			}
+			settings.other.forEach {
+				let (name, value) = $0
+				params[name] = value
+			}
+		}
+
 		// What do we want back: authorization code, token directly, etc. Required.
 		params["response_type"] = flowState.responseType.map{ $0.rawValue }.sorted().joined(separator: " ")
 
@@ -471,18 +489,10 @@ public final class MMMothClient {
 			params["nonce"] = flowState.nonceString
 		}
 
-		// OpenID specific parameters.
-		if let display = openIDSettings?.display {
-			params["display"] = display.rawValue
-		}
-		if let prompt = openIDSettings?.prompt {
-			params["prompt"] = prompt.map{ $0.rawValue }.joined(separator: " ")
-		}
-
 		return urlWithParamsInQuery(url: flowState.config.authorizationEndpoint, params: params)
 	}
 
-	/// Turns the client into `.cancelled` state unless it is in `.authrorized` already. Safe to call multiple times.
+	/// Turns the client into `.cancelled` state unless it is in `.authorized` already. Safe to call multiple times.
 	/// Use `end()` to cancel it even when athorized.
 	public func cancel() {
 
@@ -1251,6 +1261,8 @@ extension MMMothClient {
 			case touch = "touch"
 		}
 
+		/// "...specifies whether the Authorization Server prompts the End-User for reauthentication and consent."
+		/// Note that some of these can be combined, thus a set.
 		public var prompt: Set<Prompt> = [ .login ]
 
 		public enum Prompt: String {
@@ -1268,6 +1280,12 @@ extension MMMothClient {
 			/// The server should ask the end-user to select their account.
 			case selectAccount = "select_account"
 		}
+
+		/// "End-User's preferred languages and scripts for the user interface [...] ordered by preference."
+		public var uiLocales: Array<String> = []
+
+		/// Allows to pass any non-standard settings or settings not supported by this struct.
+		public var other: [String: String] = [:]
 
 		// Won't work outside the library without a public initializer.
 		public init() {}
