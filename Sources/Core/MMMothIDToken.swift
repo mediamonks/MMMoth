@@ -53,8 +53,25 @@ public final class MMMothIDToken: Equatable, Codable, CustomStringConvertible {
 
 	/// "URL of the End-User's profile picture. This URL MUST refer to an image file (for example, a PNG, JPEG,
 	/// or GIF image file), rather than to a Web page containing an image."
+	///
+	/// Note that Facebook would not put a URL here but a piece of JSON instead, so we try to extract the URL from it.
 	public var picture: URL? {
-		guard let urlString = payload["picture"] as? String, let url = URL(string: urlString) else {
+		guard let urlString = payload["picture"] as? String else {
+			return nil
+		}
+		// Facebook has a piece of JSON here despite the standard mandating a URL.
+		struct Picture: Decodable {
+			let data: PictureData
+			struct PictureData: Decodable {
+				let url: URL
+			}
+		}
+		if let jsonData = urlString.data(using: .utf8),
+			let picture = try? JSONDecoder().decode(Picture.self, from: jsonData)
+		{
+			return picture.data.url
+		}
+		guard let url = URL(string: urlString) else {
 			return nil
 		}
 		return url
