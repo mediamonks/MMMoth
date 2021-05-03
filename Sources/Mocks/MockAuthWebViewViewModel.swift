@@ -97,6 +97,8 @@ public class MockAuthWebViewViewModel: AuthWebViewViewModel {
 		self.state = .cancelled
 	}
 
+	public private(set) var ignoreNavigationErrors: Bool = false
+
 	private var timer: Timer?
 
 	private func rescheduleStateChange(_ block: @escaping (_ skip: Bool) -> Void) {
