@@ -425,6 +425,10 @@ public final class MMMothClient {
 		// `arc4random()` Is good enough in our case. Don't want to handle errors with `SecRandomCopyBytes()`.
 		stateBytes.withUnsafeMutableBytes { arc4random_buf($0.baseAddress, stateBytesCount) }
 		return stateBytes.base64EncodedString()
+			// Pluses in the query string value might not survive a round trip through some providers
+			// thus removing them.
+			// (Looking at you, Auth0, and replacing them with zeros in your name.)
+			.replacingOccurrences(of: "+", with: "0")
 	}
 
 	private func authorizationEndpointURL(
