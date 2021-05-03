@@ -71,7 +71,7 @@ import MMMObservables
 ///
 /// When the client gets information from authorization server via `handleAuthorizationRedirect()`, then it either:
 ///
-/// - immediatelly fails the flow (in case the server returned an explicit error or provided an invalid response);
+/// - immediately fails the flow (in case the server returned an explicit error or provided an invalid response);
 ///
 /// - or directly enters `.authorized` state (in case of an "implicit" flow, that is when responseType
 ///   does NOT include `.code`);
@@ -493,7 +493,7 @@ public final class MMMothClient {
 	}
 
 	/// Turns the client into `.cancelled` state unless it is in `.authorized` already. Safe to call multiple times.
-	/// Use `end()` to cancel it even when athorized.
+	/// Use `end()` to cancel it even when authorized.
 	public func cancel() {
 
 		assert(Thread.isMainThread)
@@ -521,7 +521,7 @@ public final class MMMothClient {
 
 			// TODO: for OpenID we can also request to end the corresponding session with the authorization server,
 			// see [https://openid.net/specs/openid-connect-session-1_0.html]().
-			// This involves a webview however and might look weird in a native app where no webview
+			// This involves a web view however and might look weird in a native app where no web view
 			// is used when somebody request to log out.
 			MMMLogInfo(self, "Ending the flow by dropping credentials")
 
@@ -769,7 +769,7 @@ public final class MMMothClient {
 					throw error("Invalid `scope` field")
 				}
 			} else {
-				// The absense of scope means that it's the one that was initially requested.
+				// The absence of scope means that it's the one that was initially requested.
 				return flowState.scope
 			}
 		}()
@@ -1011,7 +1011,7 @@ public final class MMMothClient {
 
 		lastRetryTimeout = newTimeout
 
-		// This looks like an unneccessery round trip, but allows to override the scale of these timeouts as well.
+		// This looks like an unnecessary round trip, but allows to override the scale of these timeouts as well.
 		newTimeout = timeSource.timeIntervalFromNowToDate(timeSource.now().addingTimeInterval(newTimeout))
 
 		_scheduleTokenRefresh(newTimeout)
@@ -1079,7 +1079,7 @@ public final class MMMothClient {
 		self.performTokenRequest(
 			url: tokenEndpoint,
 			params: [
-				// This time we are exchaning our refresh token.
+				// This time we are exchanging our refresh token.
 				"grant_type": "refresh_token",
 				// ...and here it goes.
 				"refresh_token": refreshToken
@@ -1104,7 +1104,7 @@ public final class MMMothClient {
 		}
 
 		guard case .authorized(_, refreshing: true) = self.state else {
-			assertionFailure("We keep the `refreshig` flag up till the refresh completes successfully")
+			assertionFailure("We keep the `refreshing` flag up till the refresh completes successfully")
 			return
 		}
 
@@ -1121,7 +1121,7 @@ public final class MMMothClient {
 			// It should not hurt if we persist trying to refresh the token in these cases. This won't cause any dead
 			// end situations:
 			// - if the user code is waiting on a token from us, then it eventually gets a timeout;
-			// - in case the end-user cannot access their protected resources for too lon, then the can re-authorize
+			// - in case the end-user cannot access their protected resources for too long, then the can re-authorize
 			//   or sign in/out again.
 			MMMLogError(self, "Could not refresh token(s) but will retry later: \(error.mmm_description)")
 
@@ -1205,7 +1205,7 @@ public final class MMMothClient {
 		}
 
 		// Passing client credentials via Basic auth headers, see [https://tools.ietf.org/html/rfc6749#section-2.3.1]().
-		// Note that we could include them into the body, but this is not necesserily supported by the server
+		// Note that we could include them into the body, but this is not necessarily supported by the server
 		// nor is recommended to use. The headers option must be supported by any server however.
 		if let clientSecret = config.clientSecret {
 

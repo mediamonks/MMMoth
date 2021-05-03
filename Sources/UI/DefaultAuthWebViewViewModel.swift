@@ -78,7 +78,7 @@ public final class DefaultAuthWebViewViewModel: AuthWebViewViewModel {
 		}
 
 		guard case .authorizing = client.state else {
-			// Could be that the flow has been cancelled while the webview is still working. Ignoring.
+			// Could be that the flow has been cancelled while the web view is still working. Ignoring.
 			return
 		}
 
@@ -93,7 +93,7 @@ public final class DefaultAuthWebViewViewModel: AuthWebViewViewModel {
 		}
 
 		guard case .authorizing = client.state else {
-			// Could be that the flow has been cancelled while the webview is still working. Ignoring.
+			// Could be that the flow has been cancelled while the web view is still working. Ignoring.
 			return
 		}
 

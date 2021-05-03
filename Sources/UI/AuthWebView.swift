@@ -267,7 +267,7 @@ internal final class AuthWebView: NonStoryboardableView {
 
 	private var stateOverlayView: UIView?
 
-	/// Shows the given view as an overlay on top of the webview, this can be an activity indicator, "something went wrong" state, etc.
+	/// Shows the given view as an overlay on top of the web view, this can be an activity indicator, "something went wrong" state, etc.
 	public func setStateOverlayView(_ view: UIView?, animated: Bool) {
 
 		guard stateOverlayView != view else {
@@ -309,7 +309,7 @@ public protocol AuthWebViewViewModel: AnyObject {
 
 	var didChange: SimpleEvent { get }
 
-	/// The webview, once it got an endpoint, should be intercepting requests to URLs matching this one
+	/// The web view, once it got an endpoint, should be intercepting requests to URLs matching this one
 	/// (possibly with different query items) and feeding them via `handleRedirect()`.
 	var redirectURL: URL { get }
 
@@ -372,7 +372,7 @@ public enum AuthWebViewViewModelState: Equatable {
 	/// The request to a redirect URL contains a successful response and the flow is being finalized
 	/// by fetching an access token, etc.
 	///
-	/// The view can display another "activity" state here or continue displaying the webview in its previous state.
+	/// The view can display another "activity" state here or continue displaying the web view in its previous state.
 	case finalizing
 
 	/// The flow has failed at one of the steps.
@@ -389,6 +389,6 @@ public enum AuthWebViewViewModelState: Equatable {
 
 	/// The authentication has been cancelled by the user.
 	///
-	/// The view is expected to be dismissed wuthout changing what was displayed in it.
+	/// The view is expected to be dismissed without changing what was displayed in it.
 	case cancelled
 }

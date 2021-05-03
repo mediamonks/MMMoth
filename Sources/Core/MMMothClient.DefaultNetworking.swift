@@ -9,7 +9,7 @@ extension MMMothClient {
 
 	/// Default implementation of `MMMothClientNetworking` used by `MMMothClient`.
 	///
-	/// Not open for subclassing, but open for composing into your own implementations to simulate networ errors
+	/// Not open for subclassing, but open for composing into your own implementations to simulate network errors
 	/// or delays in test builds of your app.
 	public final class DefaultNetworking: MMMothClientNetworking {
 
@@ -57,7 +57,7 @@ extension MMMothClient {
 					return
 				}
 
-				// Not checking `response.mimeType` here as it might be absent or can include the "charset" paramater,
+				// Not checking `response.mimeType` here as it might be absent or can include the "charset" parameter,
 				// so comparing it with "application/json" won't work. Let's just try to decode it instead.
 
 				do {

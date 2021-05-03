@@ -12,8 +12,8 @@ import MMMocking
 ///
 /// 1. It spends some time in the "preparing" state sometimes skipping it.
 /// 2. Then pretends that it got an endpoint (an inline page) with a link to a redirect URL.
-///    Tapping the link should cause the webview to intercept it and notify the view model via `handleRedirect()`.
-/// 3. The latter is going to jump to a "finalizing" state spending some time there (possibily skipping it)
+///    Tapping the link should cause the web view to intercept it and notify the view model via `handleRedirect()`.
+/// 3. The latter is going to jump to a "finalizing" state spending some time there (possibly skipping it)
 ///    and then jumping to "completed".
 /// And of course it can randomly fail at any step.
 public class MockAuthWebViewViewModel: AuthWebViewViewModel {
