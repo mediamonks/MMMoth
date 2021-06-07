@@ -948,8 +948,10 @@ public final class MMMothClient {
 
 	// Note that could move these constants into the config, but reasonable defaults should be OK.
 
-	/// How early before the actual token expiration time we should begin refreshing them.
-	private let eagerRefreshInterval: TimeInterval = 2 * 60
+	/// How far in advance the tokens can be refreshed.
+	/// Note that some providers (Auth0) don't really allow to refresh in advance.
+	/// (We used 2 mins before but that does not play well with short-lived test tokens.)
+	private let eagerRefreshInterval: TimeInterval = 1 * 60
 
 	/// How the timeouts should grow after each failure to retry.
 	private let refreshBackOffPolicy: (min: TimeInterval, max: TimeInterval, multiplier: Double) = (1, 2 * 60 * 60, 2)
