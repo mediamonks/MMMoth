@@ -57,9 +57,18 @@ public final class AuthWebViewController: NonStoryboardableViewController, WKNav
 	private weak var _view: AuthWebView?
 
 	public override func loadView() {
-		let v = AuthWebView(webView: webView)
+		let v = AuthWebView(webView: webView ?? defaultWebView())
 		self._view = v
 		self.view = v
+	}
+
+	internal func defaultWebView() -> WKWebView {
+		let config = WKWebViewConfiguration()
+		// We don't want the authorization page to store the auth token in the cookies and then use it next time
+		// when we want to sign in as another user.
+		// There is `prompt=login` parameter in OpenID just for this, but not every provider handles it properly.
+		config.websiteDataStore = .nonPersistent()
+		return WKWebView(frame: .zero, configuration: config)
 	}
 
 	override public func viewDidLoad() {
@@ -248,9 +257,9 @@ internal final class AuthWebView: NonStoryboardableView {
 
 	public let webView: WKWebView
 
-	public init(webView: WKWebView?) {
+	public init(webView: WKWebView) {
 
-		self.webView = webView ?? WKWebView()
+		self.webView = webView
 
 		super.init()
 

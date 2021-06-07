@@ -1,12 +1,12 @@
 #
 # MMMoth. Part of MMMTemple.
-# Copyright (C) 2015-2020 MediaMonks. All rights reserved.
+# Copyright (C) 2015-2021 MediaMonks. All rights reserved.
 #
 
 Pod::Spec.new do |s|
 
     s.name = "MMMoth"
-    s.version = "1.6.4"
+    s.version = "1.7.0"
     s.summary = "Basic OAuth/OpenID library."
     s.description =  s.summary
     s.homepage = "https://github.com/mediamonks/#{s.name}"
