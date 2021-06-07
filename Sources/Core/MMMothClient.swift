@@ -949,7 +949,6 @@ public final class MMMothClient {
 	// Note that could move these constants into the config, but reasonable defaults should be OK.
 
 	/// How far in advance the tokens can be refreshed.
-	/// Note that some providers (Auth0) don't really allow to refresh in advance.
 	/// (We used 2 mins before but that does not play well with short-lived test tokens.)
 	private let eagerRefreshInterval: TimeInterval = 1 * 60
 
@@ -1088,9 +1087,17 @@ public final class MMMothClient {
 				// This time we are exchanging our refresh token.
 				"grant_type": "refresh_token",
 				// ...and here it goes.
-				"refresh_token": refreshToken
+				"refresh_token": refreshToken,
+
 				// No scope needed, as we don't want to change it.
-				// No client identifier either, the token should be bound to the client.
+
+				// The client identifier should not be needed here in general as according to the above
+				// chapter of the spec "...the refresh token is bound to the client to which it was issued."
+				// and later in section 2.3.1 they say that confidential clients MAY use 'client_id' parameter
+				// as an alternative to the basic auth header but it's not recommended, i.e. it's definitely
+				// not a requirement to have it and sever providers we used this with so far were fine,
+				// however Auth0 fails the refreshes with 401 if we don't provide "client_id", so here is one.
+				"client_id": config.clientIdentifier,
 			]
 		) { [weak self] (result) in
 			self?.didFinishRefreshingTokens(result)
