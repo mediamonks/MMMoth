@@ -45,9 +45,13 @@ extension MMMothClient {
 					return
 				}
 
-				// Note that the token endpoint returns error info with status code 400,
+				// Note that the token endpoint returns errors with the status code 400,
 				// see [https://tools.ietf.org/html/rfc6749#section-5.2]().
-				guard response.statusCode == 200 || response.statusCode == 400 else {
+				guard
+					response.statusCode == 200
+					|| response.statusCode == 400
+					|| response.statusCode == 403 // But not everybody returns 400 in case of errors (hello Auth0).
+				else {
 					dispatchCompletion(.failure(makeError("Got \(response.statusCode)")))
 					return
 				}
