@@ -12,7 +12,7 @@ Podfile:
 source 'https://github.com/mediamonks/MMMSpecs.git'
 source 'https://github.com/CocoaPods/Specs.git'
 ...
-pod 'MMMoth/Core'
+pod 'MMMoth'
 ```
 
 ## Usage
