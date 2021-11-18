@@ -18,7 +18,7 @@ extension MMMothClient {
 		public var accessToken: String?
 		public var expiresAt: Date? // TODO: rename to accessTokenExpiresAt or combine them into a struct similar to idToken
 
-		internal var refreshToken: String?
+		public var refreshToken: String?
 
 		public var idToken: MMMothIDToken?
 
