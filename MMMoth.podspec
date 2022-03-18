@@ -6,24 +6,24 @@
 Pod::Spec.new do |s|
 
     s.name = "MMMoth"
-    s.version = "1.8.1"
+    s.version = "1.9.0"
     s.summary = "Basic OAuth/OpenID library."
     s.description =  s.summary
     s.homepage = "https://github.com/mediamonks/#{s.name}"
     s.license = "MIT"
     s.authors = "MediaMonks"
     s.source = { :git => "https://github.com/mediamonks/#{s.name}.git", :tag => s.version.to_s }
-    
+
     s.ios.deployment_target = '11.0'
-    
+
     s.swift_versions = '4.2'
-    s.static_framework = true   
+    s.static_framework = true
     s.pod_target_xcconfig = {
         "DEFINES_MODULE" => "YES"
-    }   
+    }
 
     s.dependency 'MMMLog'
-  
+
     s.subspec 'Core' do |s|
       s.source_files = "Sources/Core/**/*.swift"
       s.dependency 'MMMLoadable'
@@ -34,8 +34,8 @@ Pod::Spec.new do |s|
       s.dependency 'MMMoth/Core'
       # For non-storyboardables, etc.
       s.dependency 'MMMCommonUI'
-    end  
- 
+    end
+
     s.subspec 'Mocks' do |s|
       s.source_files = "Sources/Mocks/**/*.swift"
       s.dependency 'MMMoth/UI'
@@ -43,11 +43,11 @@ Pod::Spec.new do |s|
       s.dependency 'MMMocking'
       s.dependency 'MMMObservables'
       s.dependency 'MMMCommonCore'
-   end  
-    
+   end
+
     s.test_spec 'Tests' do |ts|
       ts.source_files = "Tests/**/*.swift"
     end
-  
+
     s.default_subspecs = ['Core', 'UI']
 end
