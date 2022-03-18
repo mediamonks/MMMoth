@@ -7,6 +7,7 @@ import MMMCommonCore
 import MMMLog
 import MMMObservables
 import MMMocking
+import UI
 
 /// To test AuthWebViewController without any actual provider.
 ///

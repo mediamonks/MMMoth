@@ -3,6 +3,8 @@
 // Copyright (C) 2020 MediaMonks. All rights reserved.
 //
 
+import Foundation
+
 // To not depend on MMMTemple for NSError conveniences.
 extension NSError {
 

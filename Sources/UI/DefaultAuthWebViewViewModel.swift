@@ -6,6 +6,7 @@
 import Foundation
 import MMMLog
 import MMMObservables
+import Core
 
 public final class DefaultAuthWebViewViewModel: AuthWebViewViewModel {
 

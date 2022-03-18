@@ -4,6 +4,8 @@
 //
 
 @testable import MMMoth
+@testable import Core
+import Foundation
 import XCTest
 
 class MMMothClientTestCase: XCTestCase {
