@@ -6,7 +6,10 @@
 import Foundation
 import MMMLog
 import MMMObservables
+
+#if SWIFT_PACKAGE
 import Core
+#endif
 
 public final class DefaultAuthWebViewViewModel: AuthWebViewViewModel {
 
