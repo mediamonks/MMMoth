@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>MMMoth  Reference</title>
+    <title>Protocols  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset="utf-8">
@@ -14,8 +14,9 @@
   </head>
   <body>
 
+    <a name="//apple_ref/swift/Section/Protocols" class="dashAnchor"></a>
 
-    <a title="MMMoth  Reference"></a>
+    <a title="Protocols  Reference"></a>
 
     <header class="header">
       <a href="https://media.monks.com">
@@ -28,7 +29,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="index.html">MMMoth Reference</a>
       <img class="carat" src="img/carat.png" alt=""/>
-      MMMoth  Reference
+      Protocols  Reference
     </p>
 
     <div class="content-wrapper">
@@ -132,36 +133,131 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            
-            <h1 id='mmmoth' class='heading'>MMMoth</h1>
-
-<p><a href="https://github.com/mediamonks/MMMoth/actions?query=workflow%3ABuild"><img src="https://github.com/mediamonks/MMMoth/workflows/Build/badge.svg" alt="Build"></a>
-<a href="https://github.com/mediamonks/MMMoth/actions?query=workflow%3ATest"><img src="https://github.com/mediamonks/MMMoth/workflows/Test/badge.svg" alt="Test"></a></p>
-
-<p>Basic OAuth/OpenID library.</p>
-
-<p>(This is a part of <code>MMMTemple</code> suite of iOS libraries we use at <a href="https://www.mediamonks.com/">MediaMonks</a>.)</p>
-<h2 id='installation' class='heading'>Installation</h2>
-
-<p>Podfile:</p>
-<pre class="highlight ruby"><code><span class="n">source</span> <span class="s1">'https://github.com/mediamonks/MMMSpecs.git'</span>
-<span class="n">source</span> <span class="s1">'https://github.com/CocoaPods/Specs.git'</span>
-<span class="p">.</span><span class="nf">.</span><span class="p">.</span>
-<span class="nf">pod</span> <span class="s1">'MMMoth'</span>
-</code></pre>
-
-<p>SPM:</p>
-<pre class="highlight swift"><code><span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/mediamonks/MMMoth"</span><span class="p">,</span> <span class="o">.</span><span class="nf">upToNextMajor</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="s">"1.9.0"</span><span class="p">))</span>
-</code></pre>
-<h2 id='usage' class='heading'>Usage</h2>
-
-<p>See the comments for <code><a href="Classes/MMMothClient.html">MMMothClient</a></code> class.</p>
-
-<hr>
+            <h1>Protocols</h1>
+            <p>The following protocols are available globally.</p>
 
           </div>
         </section>
 
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Protocol/AuthWebViewViewModel" class="dashAnchor"></a>
+                    <a class="token" href="#/">AuthWebViewViewModel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Protocols/AuthWebViewViewModel.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Protocol/MMMothOpenIDConfigProvider" class="dashAnchor"></a>
+                    <a class="token" href="#/">MMMothOpenIDConfigProvider</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>OpenID config that can be fetched/refreshed from somewhere, like a local .plist or a .json response of OpenID Discovery.</p>
+
+                        <a href="Protocols/MMMothOpenIDConfigProvider.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Protocol/MMMothClientTimeSource" class="dashAnchor"></a>
+                    <a class="token" href="#/">MMMothClientTimeSource</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Something providing <code><a href="Classes/MMMothClient.html">MMMothClient</a></code> with the current time and its scale. Handy for testing.</p>
+
+                        <a href="Protocols/MMMothClientTimeSource.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Protocol/MMMothClientNetworking" class="dashAnchor"></a>
+                    <a class="token" href="#/">MMMothClientNetworking</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Allows to override how <code><a href="Classes/MMMothClient.html">MMMothClient</a></code> makes network calls. Used mainly for testing.</p>
+
+                        <a href="Protocols/MMMothClientNetworking.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Protocol/MMMothClientStorage" class="dashAnchor"></a>
+                    <a class="token" href="#/">MMMothClientStorage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Something that can locally store credentials obtained by <code><a href="Classes/MMMothClient.html">MMMothClient</a></code>.
+Allows to customize where and how they are stored, e.g. user defaults or keychain.</p>
+
+<p>Assuming for simplicity that there is only one set of credentials per client identifier.
+This is a fair assumption to hold in a native app:</p>
+
+<ol>
+<li>Client identifiers for different authorization servers are usually different.</li>
+<li>Native apps usually work with a single set of scopes and response types.</li>
+</ol>
+
+<p>Event if one bumps into the limitation of this assumption, then it should not be hard to
+implement a custom store providing it with extra keys to separate the credentials.</p>
+
+                        <a href="Protocols/MMMothClientStorage.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
       </article>
     </div>

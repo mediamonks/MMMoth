@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MMMothClient Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/MMMothClient" class="dashAnchor"></a>
+
+    <a title="MMMothClient Class Reference"></a>
+
+    <header class="header">
+      <a href="https://media.monks.com">
+        <img src="../img/logo.png" srcset="../img/logo@2x.png 2x" alt="Media.Monks" class="header-logo" />
+      </a>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">MMMoth Reference</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      MMMothClient Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AuthWebViewController.html">AuthWebViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AuthWebViewController/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/DefaultAuthWebViewViewModel.html">DefaultAuthWebViewViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MMMothClient.html">MMMothClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MMMothClient/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MMMothClient/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MMMothClient/Credentials.html">– Credentials</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MMMothClient/DefaultNetworking.html">– DefaultNetworking</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MMMothClient/Config.html">– Config</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MMMothClient/DefaultTimeSource.html">– DefaultTimeSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MMMothClient/OpenIDSettings.html">– OpenIDSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MMMothClient/ResponseType.html">– ResponseType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MMMothClient/UserDefaultsStorage.html">– UserDefaultsStorage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MMMothIDToken.html">MMMothIDToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MMMothOpenIDDiscoveryConfigProvider.html">MMMothOpenIDDiscoveryConfigProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MMMothStaticOpenIDConfigProvider.html">MMMothStaticOpenIDConfigProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MockAuthWebViewViewModel.html">MockAuthWebViewViewModel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/AuthWebViewViewModelState.html">AuthWebViewViewModelState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AuthWebViewViewModel.html">AuthWebViewViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MMMothClientNetworking.html">MMMothClientNetworking</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MMMothClientStorage.html">MMMothClientStorage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MMMothClientTimeSource.html">MMMothClientTimeSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MMMothOpenIDConfigProvider.html">MMMothOpenIDConfigProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MMMothOpenIDConfig.html">MMMothOpenIDConfig</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>MMMothClient</h1>
+            <p>Basic <a href="https://tools.ietf.org/html/rfc6749">OAuth 2.0</a> client supporting
+<a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID</a> as well.</p>
+<h2 id='oauth-refresher' class='heading'>OAuth Refresher</h2>
+
+<ol>
+<li><p>The app (&ldquo;client&rdquo;) wants to get access to protected resources of the end-user and thus needs a permission from
+them in the form of an access token, a string that the app is going to show to the server storing those resources.</p></li>
+<li><p>In order to obtain the access token the app opens a web browser (in-app or external) and navigates it to
+the corresponding &ldquo;authorization server&rdquo;. It tells the server what kind of app it is (&ldquo;client identifier&rdquo;),
+what resources the talk is about (&ldquo;scope&rdquo;), and how the credentials should be returned back (&ldquo;response type&rdquo;).</p></li>
+<li><p>The end-user authenticates themselves on this page and confirms that they are OK with the app accessing the
+resources in question.</p></li>
+<li><p>The server responds back to the app by directing the browser to a &ldquo;redirect URL&rdquo; mentioned by the app earlier
+adding its response in &ldquo;query&rdquo; or &ldquo;fragment&rdquo; parts of this URL.</p></li>
+<li><p>The app then either directly finds the access token in this response URL (&ldquo;implicit flow&rdquo;) or uses a short-lived
+code from there to get the access token via a separate network call to the &ldquo;token endpoint&rdquo;
+(&ldquo;authorization code flow&rdquo;).</p></li>
+</ol>
+
+<p>Note that the extra step about code seems like having no sense for a native app. This is because it was designed
+for web servers and similar clients allowing them to obtain access tokens without the end-user (and thus any
+malicious code running on their device) seeing them. Note also that the access tokens usually expire but might
+be refreshed using a &ldquo;refresh token&rdquo;. A quirk of the protocol is that this token, if available, can be obtained
+only via &ldquo;authorization code flow&rdquo;.</p>
+<h2 id='openid-refresher' class='heading'>OpenID Refresher</h2>
+
+<p>OpenID is essentially an OAuth flow where the resource being accessed is some basic information about the user.
+Implementation-wise the &ldquo;scope&rdquo; of such a flow includes &ldquo;openid&rdquo; and a more fancy JWT ID Token is returned
+in addition to (or instead of) the usual access token. It&rsquo;s an official replacement for ad-hoc OAuth flows used
+earlier to authenticate users of one service by asking them via OAuth for access to their email address or basic
+details let say on another service.</p>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>TLDR: call <code>start*()</code> and watch the <code>state</code> to become <code>.authorized</code> helping with authorization UI when needed.</p>
+
+<p>Nothing happens when the client is initialized, i.e. it stays at <code>.idle</code>.</p>
+
+<p>Once <code>start()</code> and friends are called the client checks the storage for the existing credentials corresponding
+to the passed scope and response types:</p>
+
+<ul>
+<li><p>If credentials were found and are not expired or can be refreshed, then it directly switches to
+<code>.authorized</code> state. The user code now has access to the token(s).</p></li>
+<li><p>If no good credentials were found and a non-interactive (&ldquo;silent&rdquo;) mode was specified, then the client
+cancels the flow. The user code can treat this state as &ldquo;not logged in&rdquo; / &ldquo;have no access&rdquo;.</p></li>
+<li><p>If no good credentials were found and an interactive mode was specified, then the client
+enters <code>.authorizing</code> state and expects the user code to help with authorization UI
+by presenting a browser (in-app or external).</p></li>
+</ul>
+
+<p>(See <code><a href="../Classes/AuthWebViewController.html">AuthWebViewController</a></code> in &ldquo;MMMoth/UI&rdquo; for a basic implementation.)</p>
+
+<p>The browser should navigate to the endpoint associated with <code>.authorizing</code> state.
+  The user code should be able to intercept all the requests to the associated redirect URL and feed them back
+  to the client via <code>handleAuthorizationRedirect()</code>; it should also report any errors opening the endpoint
+  via <code>handleAuthorizationFailure()</code> and can cancel the flow via <code>cancel()</code>.</p>
+
+<p>When the client gets information from authorization server via <code>handleAuthorizationRedirect()</code>, then it either:</p>
+
+<ul>
+<li><p>immediately fails the flow (in case the server returned an explicit error or provided an invalid response);</p></li>
+<li><p>or directly enters <code>.authorized</code> state (in case of an &ldquo;implicit&rdquo; flow, that is when responseType
+does NOT include <code>.code</code>);</p></li>
+<li><p>or begins exchanging the authorization code to token(s) (in case of an &ldquo;authorization code&rdquo; flow, that is when
+responseType does include <code>.code</code>).</p></li>
+</ul>
+
+<p>A picture for the above:</p>
+<pre class="highlight swift"><code>         <span class="err">┌─────────────────┐</span>
+         <span class="err">│</span>      <span class="n">idle</span>       <span class="err">│</span>
+         <span class="err">└─────────────────┘</span>
+                  <span class="err">│</span>
+                  <span class="err">▼</span>
+                                         <span class="err">┏━━━━━━━━━━━━━━━━━┓</span>
+              <span class="nf">start</span><span class="p">()</span>  <span class="err">─────────────────▶┃</span>   <span class="n">authorized</span>    <span class="err">┃</span>
+                        <span class="kt">Have</span> <span class="n">credentials</span> <span class="err">┗━━━━━━━━━━━━━━━━━┛</span>
+                  <span class="err">│</span>       <span class="k">in</span> <span class="n">the</span> <span class="n">storage</span>
+                  <span class="err">▼</span>
+        <span class="kt">No</span> <span class="n">good</span> <span class="n">credentials</span>              <span class="err">┌─────────────────┐</span>
+           <span class="k">in</span> <span class="n">the</span> <span class="n">storage</span>   <span class="err">────────────▶│</span>    <span class="n">cancelled</span>    <span class="err">│</span>
+                  <span class="err">│</span>          <span class="kt">Silent</span> <span class="n">mode</span> <span class="err">└─────────────────┘</span>
+                  <span class="err">│</span>
+ <span class="kt">Interactive</span> <span class="n">mode</span> <span class="err">│</span>
+                  <span class="err">▼</span>
+         <span class="err">┌</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">┐</span>  <span class="kt">The</span> <span class="n">user</span> <span class="n">code</span> <span class="n">opens</span> <span class="n">a</span> <span class="n">browser</span>
+             <span class="n">authorizing</span>      <span class="n">and</span> <span class="n">directs</span> <span class="n">it</span> <span class="n">to</span> <span class="n">the</span>
+         <span class="err">└</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">┘</span>  <span class="n">specified</span> <span class="kt">URL</span><span class="o">.</span>
+
+
+ <span class="kt">The</span> <span class="n">user</span> <span class="n">code</span> <span class="n">managing</span> <span class="n">the</span> <span class="n">browser</span> <span class="n">calls</span> <span class="n">either</span> <span class="n">of</span> <span class="nv">these</span><span class="p">:</span>
+
+                                         <span class="err">┌─────────────────┐</span>
+                               <span class="nf">cancel</span><span class="p">()</span><span class="err">─▶│</span>    <span class="n">cancelled</span>    <span class="err">│</span>
+                                         <span class="err">└─────────────────┘</span>
+                                         <span class="err">┌─────────────────┐</span>
+           <span class="nf">handleAuthorizationFailure</span><span class="p">()</span><span class="err">─▶│</span>     <span class="n">failed</span>      <span class="err">│</span>
+                                         <span class="err">└─────────────────┘</span>
+                                                  <span class="err">▲</span>
+          <span class="nf">handleAuthorizationRedirect</span><span class="p">()</span>           <span class="err">│</span>
+
+ <span class="kt">Implicit</span> <span class="err">│</span>   <span class="kt">Auth</span> <span class="kt">Code</span> <span class="err">│</span>             <span class="err">│</span>           <span class="err">│</span>
+     <span class="n">flow</span> <span class="err">│</span>   <span class="n">or</span> <span class="kt">Hybrid</span> <span class="err">│</span>
+          <span class="err">│</span>        <span class="n">flow</span> <span class="err">▼</span>             <span class="err">└</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">┤</span>
+          <span class="err">│</span>    <span class="err">┌</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">┐</span>
+          <span class="err">│</span>       <span class="n">fetchingToken</span>   <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">┘</span>
+          <span class="err">│</span>    <span class="err">└</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">─</span> <span class="err">┘</span>
+          <span class="err">│</span>             <span class="err">│</span>
+          <span class="err">│</span>             <span class="err">▼</span>
+          <span class="err">│</span>    <span class="err">┏━━━━━━━━━━━━━━━━━┓</span>
+          <span class="err">└───▶┃</span>   <span class="n">authorized</span>    <span class="err">┃</span>
+               <span class="err">┗━━━━━━━━━━━━━━━━━┛</span>
+</code></pre>
+<h2 id='notes' class='heading'>Notes</h2>
+
+<p>Initially I wanted to have an OpenID client that would be using an OAuth client under the hood,
+but this would be more complicated without the OAuth client knowing of OpenID-specific parameters.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/init(storage:networking:timeSource:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">init(storage:<wbr>networking:<wbr>timeSource:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes without attempting to obtain authorization or check for previously stored credentials.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Enum/State" class="dashAnchor"></a>
+                    <a class="token" href="#/">State</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="../Classes/MMMothClient/State.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/state" class="dashAnchor"></a>
+                    <a class="token" href="#/">state</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/didChange" class="dashAnchor"></a>
+                    <a class="token" href="#/">didChange</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Triggers when <code><a href="../Classes/MMMothClient.html#/state">state</a></code> changes.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Enum/Mode" class="dashAnchor"></a>
+                    <a class="token" href="#/">Mode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The mode to start the flow in.</p>
+
+                        <a href="../Classes/MMMothClient/Mode.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/startOpenIDFlow(config:mode:openIDSettings:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">startOpenIDFlow(config:<wbr>mode:<wbr>openIDSettings:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A shortcut for <code>start()</code> beginning &ldquo;authorization code&rdquo; OpenID flow.</p>
+
+<p>This flow involves an extra network request but allows to have a refresh token too.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/startImplicitOpenIDFlow(config:mode:openIDSettings:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">startImplicitOpenIDFlow(config:<wbr>mode:<wbr>openIDSettings:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A shortcut for <code>start()</code> beginning &ldquo;implicit&rdquo; OpenID flow.</p>
+
+<p>This flow is faster than the &ldquo;authorization code&rdquo; flow but retrieves only an ID Token that cannot be refreshed.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/start(config:mode:responseType:scope:openIDSettings:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">start(config:<wbr>mode:<wbr>responseType:<wbr>scope:<wbr>openIDSettings:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called by the user code to start the flow.</p>
+
+<p>The config is provided here to make it more convenient when it is not available right away, e.g. when it
+has to be fetched from a backend or an OpenID provider first.</p>
+
+<p>Depending on the availability of the access/refresh tokens in the store it might skip some states.
+For example, if an access token is expired but a refresh token is still valid, then it&rsquo;ll begin with
+<code>.fetchingToken</code>.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/cancel()" class="dashAnchor"></a>
+                    <a class="token" href="#/">cancel()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Turns the client into <code>.cancelled</code> state unless it is in <code>.authorized</code> already. Safe to call multiple times.
+Use <code><a href="../Classes/MMMothClient.html#/end()">end()</a></code> to cancel it even when authorized.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/end()" class="dashAnchor"></a>
+                    <a class="token" href="#/">end()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Forgets the credentials, if was authorized, cancels the flow otherwise.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/handleAuthorizationRedirect(url:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">handleAuthorizationRedirect(url:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called by the user code when the browser got redirected to <code>redirectURL</code>.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/handleAuthorizationFailure(error:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">handleAuthorizationFailure(error:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called by the user code when the browser cannot open the authorization endpoint.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Refreshing%20of%20Tokens"></a>
+                <a name="//apple_ref/swift/Section/Refreshing of Tokens" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Refreshing%20of%20Tokens"></a>
+                  <h3 class="section-name"><span>Refreshing of Tokens</span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/nudgeToRefresh()" class="dashAnchor"></a>
+                    <a class="token" href="#/">nudgeToRefresh()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Nudges the client to begin refreshing tokens now in case it is waiting between transient token refresh errors.
+Safe to call regardless of the current state.</p>
+
+<p>When the client is authorized and the credentials have (almost) expired
+(<code>case state = .authorized(_, refreshing: true)</code>), then it is going to start refreshing them (if possible),
+retrying in case of transient errors (e.g. no network). However the timeout between unsuccessful retries is
+going to grow and it might become relatively large for the user code to simply wait for the client to refresh it.
+The user code can also have some extra information suggesting that it might make sense to retry earlier.
+For example, when the user manually triggers to refresh something, then there is a possibility that the
+connection problems are fixed and the new retry might succeed. This is a call for such a situation.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Struct/Credentials" class="dashAnchor"></a>
+                    <a class="token" href="#/">Credentials</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Access and/or ID tokens along with the scopes and response types they were obtained for.</p>
+
+<p><code>Equatable</code> for unit tests only, <code>Codable</code> for storage.</p>
+
+                        <a href="../Classes/MMMothClient/Credentials.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Class/DefaultNetworking" class="dashAnchor"></a>
+                    <a class="token" href="#/">DefaultNetworking</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Default implementation of <code><a href="../Protocols/MMMothClientNetworking.html">MMMothClientNetworking</a></code> used by <code><a href="../Classes/MMMothClient.html">MMMothClient</a></code>.</p>
+
+<p>Not open for subclassing, but open for composing into your own implementations to simulate network errors
+or delays in test builds of your app.</p>
+
+                        <a href="../Classes/MMMothClient/DefaultNetworking.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Struct/Config" class="dashAnchor"></a>
+                    <a class="token" href="#/">Config</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="../Classes/MMMothClient/Config.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Class/DefaultTimeSource" class="dashAnchor"></a>
+                    <a class="token" href="#/">DefaultTimeSource</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Default implementation of <code><a href="../Protocols/MMMothClientTimeSource.html">MMMothClientTimeSource</a></code> that can also be used to scale expiration time intervals
+seen by <code><a href="../Classes/MMMothClient.html">MMMothClient</a></code>, something that can be handy for testing.</p>
+
+                        <a href="../Classes/MMMothClient/DefaultTimeSource.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Struct/OpenIDSettings" class="dashAnchor"></a>
+                    <a class="token" href="#/">OpenIDSettings</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Optional OpenID-specific parameters for the authorization endpoint.
+See <a href="">https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest</a>.</p>
+
+                        <a href="../Classes/MMMothClient/OpenIDSettings.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Enum/ResponseType" class="dashAnchor"></a>
+                    <a class="token" href="#/">ResponseType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>What kind of thing we would like to get via a redirect URL when the authorization is successful,
+i.e. possible values of authorization endpoint&rsquo;s &ldquo;response_type&rdquo; parameter.</p>
+
+<p>Note that we only support the values listed here as other flows are either not used in a mobile app
+(&ldquo;password&rdquo; or &ldquo;client_credentials&rdquo;) or are unknown (extensions).</p>
+
+                        <a href="../Classes/MMMothClient/ResponseType.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Class/UserDefaultsStorage" class="dashAnchor"></a>
+                    <a class="token" href="#/">UserDefaultsStorage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>NSUserDefaults-backed credentials store for <code><a href="../Classes/MMMothClient.html">MMMothClient</a></code>.</p>
+
+                        <a href="../Classes/MMMothClient/UserDefaultsStorage.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2022 <a class="link" href="https://github.com/mediamonks/MMMoth" target="_blank" rel="external noopener">MediaMonks</a>. All rights reserved. (Last updated: 2022-04-26)</p>
+      <p></p>
+    </section>
+  </body>
+</html>

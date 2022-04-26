@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MMMothIDToken Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/MMMothIDToken" class="dashAnchor"></a>
+
+    <a title="MMMothIDToken Class Reference"></a>
+
+    <header class="header">
+      <a href="https://media.monks.com">
+        <img src="../img/logo.png" srcset="../img/logo@2x.png 2x" alt="Media.Monks" class="header-logo" />
+      </a>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">MMMoth Reference</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      MMMothIDToken Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AuthWebViewController.html">AuthWebViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AuthWebViewController/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/DefaultAuthWebViewViewModel.html">DefaultAuthWebViewViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MMMothClient.html">MMMothClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MMMothClient/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MMMothClient/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MMMothClient/Credentials.html">– Credentials</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MMMothClient/DefaultNetworking.html">– DefaultNetworking</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MMMothClient/Config.html">– Config</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MMMothClient/DefaultTimeSource.html">– DefaultTimeSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MMMothClient/OpenIDSettings.html">– OpenIDSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MMMothClient/ResponseType.html">– ResponseType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MMMothClient/UserDefaultsStorage.html">– UserDefaultsStorage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MMMothIDToken.html">MMMothIDToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MMMothOpenIDDiscoveryConfigProvider.html">MMMothOpenIDDiscoveryConfigProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MMMothStaticOpenIDConfigProvider.html">MMMothStaticOpenIDConfigProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MockAuthWebViewViewModel.html">MockAuthWebViewViewModel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/AuthWebViewViewModelState.html">AuthWebViewViewModelState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AuthWebViewViewModel.html">AuthWebViewViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MMMothClientNetworking.html">MMMothClientNetworking</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MMMothClientStorage.html">MMMothClientStorage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MMMothClientTimeSource.html">MMMothClientTimeSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MMMothOpenIDConfigProvider.html">MMMothOpenIDConfigProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MMMothOpenIDConfig.html">MMMothOpenIDConfig</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>MMMothIDToken</h1>
+            <p>Simple parser for <a href="https://openid.net/specs/openid-connect-core-1_0.html#IDToken">ID Tokens</a>,
+which are non-encrypted <a href="https://tools.ietf.org/html/rfc7519">JSON Web Tokens</a>.</p>
+
+<p>In the context of MMMoth library we are only interested in expiration time field, just to know when to refresh
+the token. We are not concerned with verification, it&rsquo;s something for the backend accepting the tokens.
+We don&rsquo;t want support for generic JWTs either and thus can require some of the fields avoiding optionals.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/value" class="dashAnchor"></a>
+                    <a class="token" href="#/">value</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The raw value of the token.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Required%20Claims"></a>
+                <a name="//apple_ref/swift/Section/Required Claims" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Required%20Claims"></a>
+                  <h3 class="section-name"><span>Required Claims</span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/issuer" class="dashAnchor"></a>
+                    <a class="token" href="#/">issuer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>&ldquo;Issuer Identifier for the Issuer of the response. The iss value is a case sensitive URL using the https
+scheme that contains scheme, host, and optionally, port number and path components and no query or
+fragment components.&rdquo;</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/subject" class="dashAnchor"></a>
+                    <a class="token" href="#/">subject</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>&ldquo;Subject Identifier. A locally unique and never reassigned identifier within the Issuer for the End-User,
+which is intended to be consumed by the Client, e.g., 24400320 or AItOawmwtWwcT0k51BayewNvutrJUqsvl6qs7A4.&rdquo;</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/audience" class="dashAnchor"></a>
+                    <a class="token" href="#/">audience</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>&ldquo;Audience(s) that this ID Token is intended for. It MUST contain the OAuth 2.0 client_id of the Relying Party
+as an audience value. It MAY also contain identifiers for other audiences. In the general case, the aud value is
+an array of case sensitive strings. In the common special case when there is one audience, the aud value MAY be
+a single case sensitive string.&rdquo;</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/expiresAt" class="dashAnchor"></a>
+                    <a class="token" href="#/">expiresAt</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>&ldquo;Expiration time on or after which the ID Token MUST NOT be accepted for processing.&rdquo;</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/issuedAt" class="dashAnchor"></a>
+                    <a class="token" href="#/">issuedAt</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>&ldquo;Time at which the JWT was issued.&rdquo;</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/nonce" class="dashAnchor"></a>
+                    <a class="token" href="#/">nonce</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>&ldquo;String value used to associate a Client session with an ID Token, and to mitigate replay attacks.
+The value is passed through unmodified from the Authentication Request to the ID Token.&rdquo;</p>
+
+<p>Note that this is required depending on the flow it was obtained through.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Some%20of%20the%20Standard%20Claims"></a>
+                <a name="//apple_ref/swift/Section/Some of the Standard Claims" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Some%20of%20the%20Standard%20Claims"></a>
+                  <h3 class="section-name"><span>Some of the Standard Claims</span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>&ldquo;End-User&rsquo;s full name in displayable form including all name parts, possibly including titles and suffixes,
+ordered according to the End-User&rsquo;s locale and preferences.&rdquo;</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/picture" class="dashAnchor"></a>
+                    <a class="token" href="#/">picture</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>&ldquo;URL of the End-User&rsquo;s profile picture. This URL MUST refer to an image file (for example, a PNG, JPEG,
+or GIF image file), rather than to a Web page containing an image.&rdquo;</p>
+
+<p>Note that Facebook would not put a URL here but a piece of JSON instead, so we try to extract the URL from it.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/email" class="dashAnchor"></a>
+                    <a class="token" href="#/">email</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>&ldquo;End-User&rsquo;s preferred e-mail address. Its value MUST conform to the RFC 5322 [RFC5322] addr-spec syntax.
+The RP MUST NOT rely upon this value being unique, as discussed in Section 5.7.&rdquo;</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/givenName" class="dashAnchor"></a>
+                    <a class="token" href="#/">givenName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>&ldquo;Given name(s) or first name(s) of the End-User. Note that in some cultures, people can have multiple
+given names; all can be present, with the names being separated by space characters.&rdquo;</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/familyName" class="dashAnchor"></a>
+                    <a class="token" href="#/">familyName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>&ldquo;Surname(s) or last name(s) of the End-User. Note that in some cultures, people can have multiple
+family names or no family name; all can be present, with the names being separated by space characters.&rdquo;</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/payload" class="dashAnchor"></a>
+                    <a class="token" href="#/">payload</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A raw payload dictionary in case the client needs to read something we have not covered.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/header" class="dashAnchor"></a>
+                    <a class="token" href="#/">header</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A raw header dictionary, for diagnostics.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/init(string:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">init(string:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Codable"></a>
+                <a name="//apple_ref/swift/Section/Codable" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Codable"></a>
+                  <h3 class="section-name"><span>Codable</span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/init(from:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">init(from:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/encode(to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">encode(to:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/CustomStringConvertible"></a>
+                <a name="//apple_ref/swift/Section/CustomStringConvertible" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/CustomStringConvertible"></a>
+                  <h3 class="section-name"><span>CustomStringConvertible</span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Equatable"></a>
+                <a name="//apple_ref/swift/Section/Equatable" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Equatable"></a>
+                  <h3 class="section-name"><span>Equatable</span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">==(_:<wbr>_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2022 <a class="link" href="https://github.com/mediamonks/MMMoth" target="_blank" rel="external noopener">MediaMonks</a>. All rights reserved. (Last updated: 2022-04-26)</p>
+      <p></p>
+    </section>
+  </body>
+</html>
