@@ -1,0 +1,6 @@
+{
+    "swiftPath": "Sources/",
+    "excludeList": [
+        "Sources/${PROJECT_NAME}"
+    ]
+}
